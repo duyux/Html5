@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript">
+        //用于绘制树冠轮廓的函数
+        function createCanopyPath(context) {
+            //绘制树冠
+            context.beginPath();
+
+            context.moveTo(-25, -50);
+            context.lineTo(-10, -80);
+            context.lineTo(-20, -80);
+            context.lineTo(-5, -110);
+            context.lineTo(-15, -110);
+
+            //树的顶点
+            context.lineTo(0, -140);
+
+            context.lineTo(15, -110);
+            context.lineTo(5, -110);
+            context.lineTo(20, -80);
+            context.lineTo(10, -80);
+            context.lineTo(25, -50);
+
+            //连接起点，闭合路径
+            context.closePath();
+        }
+
+        //在canvas中绘制一条对角线
+        function drawDiagonal() {
+            //取得canvas 元素及其绘图上下文
+            var canvas = document.getElementById("diagonal");
+            var context = canvas.getContext("2d");
+
+//            //用绝对坐标来创建一条路径
+//            context.beginPath();
+//            context.moveTo(70, 140);
+//            context.lineTo(140, 70);
+
+//            //将这条线绘制到canvas
+            // context.stroke();
+
+            //保存当前绘图状态
+            context.save();
+
+            //向右下方移动绘图上下文
+            context.translate(130, 250);
+
+            //创建表现树冠的路径
+            createCanopyPath(context);
+            //恢复原有的绘图状态
+            context.stroke();
+            context.restore();
+        }
+
+        window.addEventListener("load",drawDiagonal,true);
+    </script>
+</head>
+<body>
+   <canvas id="diagonal" style="border:1px solid;"  width="200" height="200"></canvas>
+</body>
+</html>

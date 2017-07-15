@@ -1,0 +1,5 @@
+E:\学习\src\Html5学习\canvas学习\canvas学习\bin\canvas学习.dll
+E:\学习\src\Html5学习\canvas学习\canvas学习\bin\canvas学习.pdb
+E:\学习\src\Html5学习\canvas学习\canvas学习\obj\Debug\ResolveAssemblyReference.cache
+E:\学习\src\Html5学习\canvas学习\canvas学习\obj\Debug\canvas学习.dll
+E:\学习\src\Html5学习\canvas学习\canvas学习\obj\Debug\canvas学习.pdb
